@@ -1,0 +1,19 @@
+import random
+import time
+
+def slot_spin():
+  symbols = ["cherry", "777", "diamond", "Bar"]
+  result = [random.choice(symbols) for _ in range(3)]
+  return result
+
+def run_test(spins = 10):
+  print("Starting slot simulation test:..\n")
+
+  for i in range(spins):
+    result = slot_spin()
+    print(f"Spin {i+1}: {result}")
+    time.sleep(0.5)
+
+  print("\nTest Completed")
+
+run_test()
